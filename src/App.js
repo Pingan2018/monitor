@@ -1,11 +1,16 @@
-import React from 'react';
-import Counter from './Counter'
+import React from "react";
+import Home from "./components/Home";
+import About from "./components/About";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Counter></Counter>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/About" component={About} />
+      </Switch>
+    </Router>
   );
 }
 
