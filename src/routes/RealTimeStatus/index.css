@@ -1,0 +1,11 @@
+.realTimeStatus > .search > .radioWrapper{
+    padding: 5px 10px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+.realTimeStatus > .search > .buttonWrapper{
+    float: right;
+} 
+.realTimeStatus-table-row{
+    background: #EFF9FB;
+}
