@@ -1,0 +1,11 @@
+.deviceStatus-a{
+    display: inline-block;
+    width:6px;
+    height:6px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #FAAD14;
+}
+.deviceStatus-text{
+    vertical-align: middle;
+}

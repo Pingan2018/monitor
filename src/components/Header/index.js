@@ -15,7 +15,7 @@ class MyHeader extends Component {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["2"]}
+          defaultSelectedKeys={["1"]}
           style={{ lineHeight: "80px", widht: 300 }}
         >
           

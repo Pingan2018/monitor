@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import DeviceStatus from "../../components/DeviceStatus";
 import "./index.css";
 import { Radio, Input, Button, Table, Divider, Tag } from "antd";
 const { Search } = Input;
@@ -18,7 +19,10 @@ const columns = [
   {
     title: "Address",
     dataIndex: "address",
-    key: "address"
+    key: "address",
+    render: (text, record) => (
+      <DeviceStatus text="已报警" myClassName="deviceStatus-a" />
+    )
   },
   {
     title: "Tags",

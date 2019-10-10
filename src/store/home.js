@@ -1,4 +1,4 @@
-import * as type from '../redux/actionTypes';
+import * as type from '../actionTypes';
 function home(state = 0, action) {
   switch (action.type) {
     case type.ADD1_SUCCESS:

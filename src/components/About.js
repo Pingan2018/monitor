@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Button } from "antd";
-import { add10 } from '../redux/actions';
+import { add10 } from '../actions';
 
 class About extends Component {
   add10 = () => {

@@ -9,21 +9,19 @@
 # |
 # |--components 页面组件
 # |
-# |--routes  路由组件
+# |--routes  路由组件 
 # |
-# |--redux 状态管理 
-# |    |
-# |    |--actions  action creator
-# |    |
-# |    |--actionTypes action常量
-# |    |
-# |    |--saga 异步处理中间件redux-saga
+# |--actions  action creator
+# |
+# |--actionTypes action常量
+# |
+# |--saga 异步处理中间件redux-saga
 # |    
 # |--static  静态资源
 # |
-# |--store 转台数据（reducer）
+# |--store 状态数据（reducer）
 # |
-# |--style 样式文件
+# |--style 公共样式文件
 
 
 

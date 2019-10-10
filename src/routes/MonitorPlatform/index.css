@@ -1,0 +1,43 @@
+.monitorPlatform {
+  width: 100%;
+  height: 100%;
+  background: #1C3259;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.gutter-example .ant-row > div {
+  background: transparent;
+  border: 0;
+}
+.gutter-box {
+  background: #00a0e9;
+  /* padding: 5px 0; */
+  margin-bottom: 0.17rem;
+}
+.monitorPlatform-report-title {
+  color: #34cdec;
+  font-size: 0.24rem;
+  font-weight: bold;
+  background: #3e5e8f;
+  text-align: center;
+  height: 0.49rem;
+  line-height: 0.49rem;
+}
+
+.monitorPlatform-report-left {
+  background: #3e5e8f;
+  height: 2.52rem;
+}
+.monitorPlatform-map {
+  background: #3e5e8f;
+  height: 6.53rem;
+}
+.monitorPlatform-report-right {
+    background: #3e5e8f;
+    height: 5.85rem;
+  }
+  .monitorPlatform-report-bottom{
+    background: #3e5e8f;
+    height: 2.52rem;
+  }
