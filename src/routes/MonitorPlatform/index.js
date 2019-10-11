@@ -383,6 +383,7 @@ const option3 = {
 };
 class MonitorPlatform extends Component {
   componentDidMount() {
+    document.querySelector('.content').style.backgroundColor = '#1C3259'
     const myChart1 = echarts.init(document.getElementById("map1"));
     myChart1.setOption(option);
     const myChart2 = echarts.init(document.getElementById("map2"));
@@ -393,6 +394,9 @@ class MonitorPlatform extends Component {
     myChart4.setOption(option2);
     const myChart5 = echarts.init(document.getElementById("map5"));
     myChart5.setOption(option3);
+  }
+  componentWillUnmount(){
+    document.querySelector('.content').style.backgroundColor = '#fff'
   }
   render() {
     return (
@@ -427,7 +431,7 @@ class MonitorPlatform extends Component {
           </Col>
           <Col className="gutter-row" span={8}>
             <Row>
-              <div className="gutter-box monitorPlatform-report-title">
+              <div className="gutter-box monitorPlatform-report-title-right">
                 分城市报警分布
               </div>
             </Row>
@@ -442,26 +446,26 @@ class MonitorPlatform extends Component {
         <Row gutter={16}>
           <Col className="gutter-row" span={6}>
             <Row>
-              <div className="gutter-box monitorPlatform-report-title">
+              <div className="gutter-box monitorPlatform-report-title-bottom-left">
                 屏端故障部门分布
               </div>
             </Row>
             <Row>
               <div
-                className="gutter-box monitorPlatform-report-bottom"
+                className="gutter-box monitorPlatform-report-bottom-left"
                 id="map3"
               ></div>
             </Row>
           </Col>
           <Col className="gutter-row" span={18}>
             <Row>
-              <div className="gutter-box monitorPlatform-report-title">
+              <div className="gutter-box monitorPlatform-report-title-bottom-right">
                 八周稳定推送数据
               </div>
             </Row>
             <Row>
               <div
-                className="gutter-box monitorPlatform-report-bottom"
+                className="gutter-box monitorPlatform-report-bottom-right"
                 id="map5"
               ></div>
             </Row>

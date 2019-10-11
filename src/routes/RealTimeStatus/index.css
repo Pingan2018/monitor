@@ -9,3 +9,10 @@
 .realTimeStatus-table-row{
     background: #EFF9FB;
 }
+.realTimeStatus > .table{
+    margin-top:0.53rem;
+}
+.realTimeStatus > .pagination{
+    margin-top:0.52rem;
+    text-align: end;
+}

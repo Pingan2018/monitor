@@ -1,43 +1,90 @@
-.monitorPlatform {
-  width: 100%;
-  height: 100%;
-  background: #1C3259;
-  box-sizing: border-box;
-  padding: 0.5rem;
-}
-
 .gutter-example .ant-row > div {
   background: transparent;
   border: 0;
 }
 .gutter-box {
-  background: #00a0e9;
-  /* padding: 5px 0; */
+  
   margin-bottom: 0.17rem;
 }
 .monitorPlatform-report-title {
   color: #34cdec;
   font-size: 0.24rem;
   font-weight: bold;
-  background: #3e5e8f;
   text-align: center;
   height: 0.49rem;
   line-height: 0.49rem;
+  background-image: url('../../static/img/vip.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.monitorPlatform-report-title-right{
+  color: #34cdec;
+  font-size: 0.24rem;
+  font-weight: bold;
+  text-align: center;
+  height: 0.49rem;
+  line-height: 0.49rem;
+  background-image: url('../../static/img/city.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.monitorPlatform-report-title-bottom-left{
+  color: #34cdec;
+  font-size: 0.24rem;
+  font-weight: bold;
+  text-align: center;
+  height: 0.49rem;
+  line-height: 0.49rem;
+  background-image: url('../../static/img/screen.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.monitorPlatform-report-title-bottom-right{
+  color: #34cdec;
+  font-size: 0.24rem;
+  font-weight: bold;
+  text-align: center;
+  height: 0.49rem;
+  line-height: 0.49rem;
+  background-image: url('../../static/img/8.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .monitorPlatform-report-left {
-  background: #3e5e8f;
+  background-image: url('../../static/img/vip@.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   height: 2.52rem;
 }
+
 .monitorPlatform-map {
   background: #3e5e8f;
   height: 6.53rem;
 }
 .monitorPlatform-report-right {
-    background: #3e5e8f;
+  background-image: url('../../static/img/city@.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
     height: 5.85rem;
   }
-  .monitorPlatform-report-bottom{
-    background: #3e5e8f;
+  .monitorPlatform-report-bottom-left{
+    background-image: url('../../static/img/city@.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+    height: 2.52rem;
+  }
+  .monitorPlatform-report-bottom-right{
+    background-image: url('../../static/img/8@.png');
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
     height: 2.52rem;
   }

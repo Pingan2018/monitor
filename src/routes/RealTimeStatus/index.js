@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import DeviceStatus from "../../components/DeviceStatus";
 import "./index.css";
-import { Radio, Input, Button, Table, Divider, Tag } from "antd";
+import { Radio, Input, Button, Table, Divider, Tag, Pagination } from "antd";
 const { Search } = Input;
 const columns = [
   {
@@ -85,6 +85,12 @@ class RealTimeStatus extends Component {
   add1 = () => {
     this.props.add1();
   };
+  onChange = pageNumber => {
+    console.log("Page: ", pageNumber);
+  };
+  onShowSizeChange = (current, pageSize) => {
+    console.log(current, pageSize);
+  };
   render() {
     return (
       <div className="realTimeStatus">
@@ -111,6 +117,17 @@ class RealTimeStatus extends Component {
               index % 2 === 0 ? "realTimeStatus-table-row" : ""
             }
             dataSource={data}
+            pagination={false}
+          />
+        </div>
+        <div className="pagination">
+          <Pagination
+            showQuickJumper
+            defaultCurrent={2}
+            total={500}
+            showSizeChanger
+            onChange={this.onChange}
+            onShowSizeChange={this.onShowSizeChange}
           />
         </div>
       </div>

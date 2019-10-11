@@ -5,10 +5,13 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import store from "./store";
-
+import { ConfigProvider } from "antd";
+import zh_CN from "antd/es/locale-provider/zh_CN";
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ConfigProvider locale={zh_CN}>
+      <App />
+    </ConfigProvider>
   </Provider>,
   document.getElementById("root")
 );
