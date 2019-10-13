@@ -1,66 +1,54 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore,applyMiddleware } from './kvx'
-// import {Provider,connect} from 'react-redux'
-import createSagaMiddleware from "redux-saga";
-import { fork, all,put, takeEvery } from "redux-saga/effects";
+import { createStore } from './redux-hooks'
 
-
-function* fetchADD10() {
-  yield put({ type: 'add_success' });
-}
-
-function* watchFetchADD10() {
-  yield takeEvery('add', fetchADD10);
-}
-
-function* rootSaga() {
-  yield all([fork(watchFetchADD10)]);
-}
-const counterReducer = function (state = 10, action) {
+const initialState = { num: 10 }
+const counterReducer = function (state = initialState, action) {
   switch (action.type) {
     case 'add':
-      return state + 10
+      return { num: state.num + 10 }
     default:
       return state
   }
 }
 
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(counterReducer,applyMiddleware(sagaMiddleware))
-sagaMiddleware.run(rootSaga);
+const { Provider, connect,_store } = createStore(counterReducer, initialState)
+console.log(_store,'/')
 
 
-
-class ReduxTest extends React.Component {
-  componentDidMount(){
-    store.subscribe(()=>{
-      this.forceUpdate()
-    })
-  }
-  render() {
-    return (
+function ReduxTest(props) {
+  console.log(props,'props')
+  return (
+    <div>
+      {props.num}
       <div>
-        {store.getState()}
-        <div>
-          <button onClick={()=>store.dispatch({type:'add'})}>+</button>
-        </div>
+        <button onClick={() => props.dispatch({ type: 'add' })}>+</button>
       </div>
-    )
-  }
+    </div>
+  )
 }
-// const ReduxTestED = connect(
-//   state=>({num:state}),
-//   {
-//     add:()=>({type:'add'})
-//   }
-// )(ReduxTest)
-// ReactDOM.render(
-//   <Provider store={store}><ReduxTestED/></Provider>,
-//   document.getElementById("root")
-// );
+const ReduxTestED = connect(ReduxTest)
+
+function ReduxTest1(props) {
+  function click1(){
+    props.dispatch({ type: 'add' })
+  }
+  function click2(){
+    props.dispatch({ type: 'add' })
+  }
+  return (
+    <div>
+      {props.num}
+      <div>
+        <button onClick={click1}>+</button>
+        <button onClick={click2}>thunk</button>
+      </div>
+    </div>
+  )
+}
+const ReduxTestED1 = connect(ReduxTest1)
 ReactDOM.render(
-  <ReduxTest/>,
+  <Provider><div><ReduxTestED /><ReduxTestED1/></div></Provider>,
   document.getElementById("root")
 );
 
